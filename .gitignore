@@ -1,38 +1,51 @@
 ```
-# Build artifacts and binaries
-*.bin
-*.iso
-build/
-dist/
-target/
-
-# Assembly/object files
-*.o
-*.obj
-*.asm
-
-# Temporary and cache files
-*.tmp
-*.swp
-*.log
-
-# Environment and local configs
+# Environment variables
 .env
 .env.local
-*.env.*
+.env.*
 
-# Editors and IDEs
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Editor/IDE files
 .vscode/
 .idea/
 
-# OS specific
-.DS_Store
-Thumbs.db
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
 
-# Coverage and testing
+# Build artifacts
+dist/
+build/
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+
+# Dependencies
+.venv/
+venv/
+.env/
+node_modules/
+target/
+.gradle/
+.mypy_cache/
+.pytest_cache/
 coverage/
 htmlcov/
 .coverage
-.mypy_cache/
-.pytest_cache/
+
+# System files
+.DS_Store
+Thumbs.db
 ```
