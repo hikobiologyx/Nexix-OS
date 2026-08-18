@@ -1,0 +1,38 @@
+```
+# Build artifacts and binaries
+*.bin
+*.iso
+build/
+dist/
+target/
+
+# Assembly/object files
+*.o
+*.obj
+*.asm
+
+# Temporary and cache files
+*.tmp
+*.swp
+*.log
+
+# Environment and local configs
+.env
+.env.local
+*.env.*
+
+# Editors and IDEs
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Coverage and testing
+coverage/
+htmlcov/
+.coverage
+.mypy_cache/
+.pytest_cache/
+```
