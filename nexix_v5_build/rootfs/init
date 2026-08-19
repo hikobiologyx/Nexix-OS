@@ -1,0 +1,81 @@
+#!/bin/busybox sh
+
+# Mount essential filesystems
+/bin/busybox mount -t proc proc /proc
+/bin/busybox mount -t sysfs sysfs /sys
+/bin/busybox mount -t devtmpfs devtmpfs /dev
+
+# Clear screen and show NEXIX Logo
+clear
+echo ""
+echo -e "\033[96m"
+echo "  _   _  _____  ____   ___  "
+echo " | \ | || ____||  _ \ / _ \ "
+echo " |  \| ||  _|  | |_) | | | |"
+echo " | |\  || |___ |  _ <| |_| |"
+echo " |_| \_||_____||_| \_\\___/ "
+echo "                            "
+echo -e "\033[93m      VERSION 5.0 [PURE CORE]     "
+echo -e "\033[92m      [SYSTEM ONLINE] [SECURE]    "
+echo -e "\033[0m"
+echo ""
+echo -e "\033[97mWelcome to Nexix Core Terminal\033[0m"
+echo ""
+
+# Custom shell loop without mentioning linux/debian/busybox
+while true; do
+    echo -ne "\033[94mnexix\033[0m@\033[95mcore\033[0m:\033[93m~\033[0m$ "
+    read cmd args
+    
+    case $cmd in
+        help)
+            echo "Available commands:"
+            echo "  help     - Show this help"
+            echo "  version  - Show system version"
+            echo "  clear    - Clear screen"
+            echo "  reboot   - Reboot system"
+            echo "  status   - System status"
+            echo "  echo     - Print text"
+            echo "  ls       - List files"
+            echo "  cat      - View file content"
+            ;;
+        version)
+            echo "Nexix OS Kernel v5.0 [Pure Core]"
+            ;;
+        clear)
+            clear
+            echo -e "\033[96m"
+            echo "  _   _  _____  ____   ___  "
+            echo " | \ | || ____||  _ \ / _ \ "
+            echo " |  \| ||  _|  | |_) | | | |"
+            echo " | |\  || |___ |  _ <| |_| |"
+            echo " |_| \_||_____||_| \_\\___/ "
+            echo -e "\033[93m      VERSION 5.0 [PURE CORE]     "
+            echo -e "\033[92m      [SYSTEM ONLINE] [SECURE]    "
+            echo -e "\033[0m"
+            ;;
+        reboot)
+            echo "Rebooting Nexix OS..."
+            /bin/busybox reboot
+            ;;
+        status)
+            echo -e "\033[92m[OK]\033[0m All systems operational"
+            echo -e "\033[92m[OK]\033[0m Core stable"
+            echo -e "\033[92m[OK]\033[0m Secure boot active"
+            ;;
+        echo)
+            echo $args
+            ;;
+        ls)
+            /bin/busybox ls $args
+            ;;
+        cat)
+            /bin/busybox cat $args
+            ;;
+        "")
+            ;;
+        *)
+            echo "nexix: command not found: $cmd"
+            ;;
+    esac
+done

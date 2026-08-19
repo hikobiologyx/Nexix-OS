@@ -1,13 +1,16 @@
 ```
-# Build artifacts and compiled files
-*.iso
-*.img
-*.cpio.gz
+# Build artifacts and binaries
+nexix_v6_build/boot/kernel
+nexix_v6_build/rootfs/bin/nexsh
+nexix_v6_build/rootfs/bin/sh
+nexix_v6_build/src/nexsh
+nexix_os.iso
 
-# Build directories
-nexix_v5_build/
+# Compiled files
+*.o
+*.obj
+*.out
 
-# Temporary and generated files
-*.tmp
-*.temp
+# Temporary and build directories
+nexix_v6_build/
 ```
