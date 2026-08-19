@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Mount essential filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+# Clear screen and show boot message
+clear
+echo ""
+echo -e "\033[1;37mNEXIX OS\033[0m \033[0;33mVersion 6.0 [Retro Core]\033[0m"
+echo -e "\033[0;32m[ OK ]\033[0m Mounted root filesystem"
+echo -e "\033[0;32m[ OK ]\033[0m Initialized system modules"
+echo -e "\033[0;32m[ OK ]\033[0m Started retro interface"
+echo ""
+echo -e "\033[0;37mWelcome to Nexix. Type 'help' to begin.\033[0m"
+echo ""
+
+# Start shell
+exec /bin/sh
