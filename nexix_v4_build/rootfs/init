@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# Mount essential filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+# Clear screen and show logo
+clear
+
+echo ""
+echo "  \033[1;96m███╗   ██╗███████╗██╗  ██╗██╗   ██╗███████╗\033[0m"
+echo "  \033[1;96m████╗  ██║██╔════╝╚██╗██╔╝██║   ██║██╔════╝\033[0m"
+echo "  \033[1;96m██╔██╗ ██║█████╗   ╚███╔╝ ██║   ██║███████╗\033[0m"
+echo "  \033[1;96m██║╚██╗██║██╔══╝   ██╔██╗ ██║   ██║╚════██║\033[0m"
+echo "  \033[1;96m██║ ╚████║███████╗██╔╝ \██╗╚██████╔╝███████║\033[0m"
+echo "  \033[1;96m╚═╝  ╚═══╝╚══════╝╚═╝   ╚═╝ ╚═════╝ ╚══════╝\033[0m"
+echo ""
+echo "  \033[1;33m● NEXIX CORE SYSTEM v4.0\033[0m"
+echo "  \033[1;32m[SYSTEM ONLINE] [SECURE] [NO LINUX LABEL]\033[0m"
+echo ""
+echo "  \033[1;37mWelcome to Nexix Core Terminal\033[0m"
+echo "  \033[0;36mType 'help' for available commands\033[0m"
+echo ""
+
+# Set prompt
+export PS1='\[\033[1;96m\]nexix\[\033[0m\]:\[\033[1;35m\]core\[\033[0m\]:\[\033[1;94m\]~\[\033[0m\]$ '
+
+# Start shell
+exec /bin/sh
