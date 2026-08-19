@@ -1,9 +1,20 @@
 ```
-# Logs and temp files
-*.log
-*.tmp
-*.swp
+# OS build artifacts
+*.iso
+*.img
+*.cpio.gz
+initrd.gz
+vmlinuz
 
-# Original rules preserved
-qemu_boot_log.txt
+# Build directories
+build/
+dist/
+target/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
 ```

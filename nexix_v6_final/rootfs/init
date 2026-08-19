@@ -1,19 +1,27 @@
-#!/bin/busybox sh
+#!/bin/sh
 
-# Монтируем системные разделы
-/bin/busybox mount -t proc proc /proc
-/bin/busybox mount -t sysfs sysfs /sys
-/bin/busybox mount -t devtmpfs devtmpfs /dev
+# Mount virtual filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
 
-echo "NEXIX OS Version 6.0 [Retro Core]"
-echo "Copyright (c) 2024 Nexix Foundation"
+# Clear screen and show retro boot log
+clear
 echo ""
-echo "[ OK ] System initialized"
-echo "[ OK ] Memory check passed"
-echo "[ OK ] Filesystem mounted"
+echo "NEXIX OS v6.0 [Retro Core]"
+echo "Copyright (c) 2015-2024 Nexix Foundation"
 echo ""
-echo "Welcome to Nexix Terminal. Type 'help' for commands."
+echo "Booting system..."
+echo "[ OK ] Mounted root filesystem"
+echo "[ OK ] Started udev"
+echo "[ OK ] Initialized hardware"
+echo "[ OK ] Loaded kernel modules"
+echo "[ OK ] Configured network loopback"
+echo "[ OK ] Started system logger"
+echo ""
+echo "Welcome to Nexix OS v6.0"
+echo "Type 'help' for available commands"
 echo ""
 
-# Запускаем шелл
-exec /bin/busybox sh
+# Start shell
+exec /bin/sh
