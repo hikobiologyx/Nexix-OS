@@ -1,51 +1,20 @@
 ```
-# Environment variables
-.env
-.env.local
-.env.*
-
-# Logs and temporary files
-*.log
-*.tmp
-*.swp
-
-# Editor/IDE files
-.vscode/
-.idea/
-
-# Python specific
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-
-# Build artifacts
-dist/
+# Build artifacts and binaries
+*.bin
+*.iso
 build/
-*.o
-*.obj
-*.a
-*.lib
-*.dll
-*.dylib
-*.so
-
-# Dependencies
-.venv/
-venv/
-.env/
-node_modules/
+dist/
 target/
-.gradle/
-.mypy_cache/
-.pytest_cache/
-coverage/
-htmlcov/
-.coverage
 
-# System files
+# OS-specific files
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+*.env.*
 ```
