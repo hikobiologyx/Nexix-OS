@@ -1,6 +1,9 @@
 ```
-# Build artifacts
-nexix_v6_build/
-# ISO images
-*.iso
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Original rules preserved
+qemu_boot_log.txt
 ```
