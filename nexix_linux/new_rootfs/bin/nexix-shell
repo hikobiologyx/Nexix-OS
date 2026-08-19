@@ -1,0 +1,5 @@
+#!/bin/sh
+export PS1='\033[1;36mnexix\033[0m@\033[1;35mcore\033[0m:\033[1;34m\w\033[0m\$ '
+export PROMPT_COMMAND='echo -ne "\033[0m"'
+cat /etc/motd
+exec sh

@@ -1,0 +1,11 @@
+\033[1;36m
+  _   _  _____  ___   ___  ____  
+ | \ | ||  ___|/ _ \ / _ \|  _ \ 
+ |  \| || |_  | | | | | | | |_) |
+ | |\  ||  _| | |_| | |_| |  _ < 
+ |_| \_||_|    \___/ \___/|_| \_\
+\033[0m
+\033[1;33mWelcome to NEXIX CORE v1.0\033[0m
+\033[90mSystem Status: \033[92mONLINE\033[90m | Kernel: Protected\033[0m
+
+Type 'help' for available commands.
