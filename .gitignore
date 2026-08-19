@@ -1,17 +1,18 @@
 ```
-# Build artifacts and compiled files
+# Build artifacts and system files
 *.o
 *.obj
 *.out
 
 # ISO and filesystem build outputs
 nexix_linux/iso/
+nexix_linux/new_rootfs/
 nexix_linux/rootfs/
 
-# Temporary and cache files
+# Temporary and backup files
 *.tmp
+*.bak
 *.swp
-*.swo
 
 # Logs
 *.log
@@ -21,10 +22,14 @@ nexix_linux/rootfs/
 .env.local
 *.env.*
 
-# Coverage and test artifacts
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Coverage reports
 coverage/
 htmlcov/
-.coverage
+*.coverage
 
 # Compression artifacts
 *.zip

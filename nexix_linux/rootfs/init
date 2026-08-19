@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Монтирование системных файловых систем
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+echo "========================================="
+echo "  ДОБРО ПОЖАЛОВАТЬ В NEXIX OS (LINUX)   "
+echo "========================================="
+echo ""
+echo "Ядро Linux успешно загружено!"
+echo "BusyBox shell готов к работе."
+echo ""
+echo "Доступные команды: ls, cat, echo, mkdir, cp, mv, rm, ps, kill, mount, umount"
+echo ""
+echo "Запуск оболочки..."
+echo ""
+
+exec /bin/sh
