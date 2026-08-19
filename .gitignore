@@ -1,18 +1,13 @@
 ```
-# Logs and temp files
-*.log
+# Build artifacts and compiled files
+*.iso
+*.img
+*.cpio.gz
+
+# Build directories
+nexix_v5_build/
+
+# Temporary and generated files
 *.tmp
-*.swp
-
-# Environment
-.env
-.env.local
-.env.*
-
-# Editors
-.vscode/
-.idea/
-
-# Original rules preserved
-*.log
+*.temp
 ```
