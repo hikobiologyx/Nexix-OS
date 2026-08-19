@@ -1,0 +1,19 @@
+#!/bin/busybox sh
+
+# Монтируем системные разделы
+/bin/busybox mount -t proc proc /proc
+/bin/busybox mount -t sysfs sysfs /sys
+/bin/busybox mount -t devtmpfs devtmpfs /dev
+
+echo "NEXIX OS Version 6.0 [Retro Core]"
+echo "Copyright (c) 2024 Nexix Foundation"
+echo ""
+echo "[ OK ] System initialized"
+echo "[ OK ] Memory check passed"
+echo "[ OK ] Filesystem mounted"
+echo ""
+echo "Welcome to Nexix Terminal. Type 'help' for commands."
+echo ""
+
+# Запускаем шелл
+exec /bin/busybox sh

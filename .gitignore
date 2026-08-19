@@ -1,18 +1,6 @@
 ```
-# OS build artifacts and ISO files
+# Build artifacts
+nexix_v6_build/
+# ISO images
 *.iso
-nexix_os_v6_final/
-nexix_v6_final/
-
-# Build directories
-build/
-dist/
-target/
-
-# Temporary files
-*.tmp
-*.temp
-
-# Logs
-*.log
 ```
